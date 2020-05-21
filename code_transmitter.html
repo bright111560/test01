@@ -1,0 +1,19 @@
+<pre>
+    <font color="#5e6d03">#include</font> <font color="#434f54">&lt;</font><font color="#000000">IRremote</font><font color="#434f54">.</font><font color="#000000">h</font><font color="#434f54">&gt;</font>
+    <font color="#5e6d03">#define</font> <font color="#00979c">NEC</font> <font color="#000000">1</font>
+    <b><font color="#d35400">IRsend</font></b> <font color="#000000">irsend</font><font color="#000000">;</font>
+     
+    <font color="#00979c">void</font> <font color="#5e6d03">setup</font><font color="#000000">(</font><font color="#000000">)</font>
+    <font color="#000000">{</font>
+     &nbsp;<b><font color="#d35400">Serial</font></b><font color="#434f54">.</font><font color="#d35400">begin</font><font color="#000000">(</font><font color="#000000">9600</font><font color="#000000">)</font><font color="#000000">;</font>
+    <font color="#000000">}</font>
+     
+    <font color="#00979c">void</font> <font color="#5e6d03">loop</font><font color="#000000">(</font><font color="#000000">)</font> <font color="#000000">{</font>
+     
+    
+     &nbsp;&nbsp;&nbsp;&nbsp;<font color="#000000">irsend</font><font color="#434f54">.</font><font color="#d35400">sendNEC</font><font color="#000000">(</font><font color="#000000">0xF1F1F1F1</font><font color="#434f54">,</font> <font color="#000000">32</font><font color="#000000">)</font><font color="#000000">;</font> <font color="#434f54">&#47;&#47; TV power code</font>
+     &nbsp;&nbsp;&nbsp;&nbsp;<font color="#d35400">delay</font><font color="#000000">(</font><font color="#000000">200</font><font color="#000000">)</font><font color="#000000">;</font>
+     &nbsp;&nbsp;&nbsp;
+    <font color="#000000">}</font>
+    
+    </pre>
